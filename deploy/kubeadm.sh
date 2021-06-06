@@ -46,3 +46,4 @@ sudo systemctl daemon-reload
 
 systemctl enable kubelet.service
 systemctl start kubelet.service
+systemctl status kubelet.service

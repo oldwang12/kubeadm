@@ -18,10 +18,6 @@ sudo sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.rep
 # 更新 yum 软件源缓存，并安装 docker-ce
 sudo yum install -y docker-ce docker-ce-cli containerd.io
 
-# 启动 Docker
-sudo systemctl enable docker
-sudo systemctl start docker
-
 # 测试 Docker 是否安装正确
 # docker run --rm hello-world
 
@@ -32,5 +28,10 @@ cat >/etc/docker/daemon.json << EOF
   "registry-mirrors": ["https://9yepy6z6.mirror.aliyuncs.com"]
 }
 EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
+
+# 启动 Docker
+sudo systemctl enable docker
+sudo systemctl start docker
+sudo systemctl status docker
+# sudo systemctl daemon-reload
+# sudo systemctl restart docker
