@@ -10,3 +10,6 @@
 
 ## node
 ./node.sh
+
+## 常见问题
+(isseus)[]
