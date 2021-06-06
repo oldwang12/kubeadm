@@ -22,3 +22,9 @@ etcd-0               Healthy     {"health":"true"}
 ```
 systemctl restart kubelet.service
 ```
+
+#### master 节点默认不能运行 pod
+如果用 kubeadm 部署一个单节点集群，默认情况下无法使用，请执行以下命令解除限制
+```
+kubectl taint nodes --all node-role.kubernetes.io/master-
+```

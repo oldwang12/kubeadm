@@ -15,7 +15,3 @@ sudo kubeadm init --image-repository registry.cn-hangzhou.aliyuncs.com/google_co
 # 这里以 flannel 为例进行介绍。
 # flannel
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/v0.11.0/Documentation/kube-flannel.yml
-
-# master 节点默认不能运行 pod
-# 如果用 kubeadm 部署一个单节点集群，默认情况下无法使用，请执行以下命令解除限制
-kubectl taint nodes --all node-role.kubernetes.io/master-
