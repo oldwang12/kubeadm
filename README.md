@@ -12,4 +12,4 @@
 ./node.sh
 
 ## 常见问题
-(isseus)[https://github.com/ucloud-lee/kubeadm/blob/master/issues.md]
+[isseus](https://github.com/ucloud-lee/kubeadm/blob/master/issues.md)
