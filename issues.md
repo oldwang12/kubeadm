@@ -28,3 +28,8 @@ systemctl restart kubelet.service
 ```
 kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
+
+helm install \
+ cert-manager jetstack/cert-manager \
+ --namespace cert-manager \
+ --set installCRDs=true
