@@ -7,6 +7,10 @@ kubeadm reset
 ```
 journalctl -xefu kubelet
 ```
+#### 查看集群初始化默认的使用的配置
+```
+kubeadm config print init-defaults
+```
 
 #### scheduler、controller-manager  Unhealthy
 ```
@@ -26,7 +30,7 @@ systemctl restart kubelet.service
 #### master 节点默认不能运行 pod
 如果用 kubeadm 部署一个单节点集群，默认情况下无法使用，请执行以下命令解除限制
 ```
-kubectl taint nodes --all node-role.kubernetes.io/master-
+kubectl taint nodes --all node-role.kubernetes.io/master
 ```
 
 helm install \
