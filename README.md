@@ -18,7 +18,7 @@
  ```
 ## 安装指定版本
 ```sh
-yum install kubelet-1.15.2-0 kubeadm-1.15.2-0 kubectl-1.15.2-0
+yum install -y kubelet-1.15.2-0 kubeadm-1.15.2-0 kubectl-1.15.2-0
 
 sudo kubeadm init --kubernetes-version=v1.15.2
 ```
